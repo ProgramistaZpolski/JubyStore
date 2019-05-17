@@ -27,13 +27,13 @@ namespace Jubystore
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            using (var client = new WebClient())
-            {
-                client.DownloadFile("http://www.programistazpolski.ct8.pl/C5D.exe", "C5D.exe");
-            }
-            Process.Start("C5D.exe");
-            //Process.Start("http://www.programistazpolski.ct8.pl/C5D.exe");
-            File.WriteAllText("c5dlist.txt", "true");
+            new JubyDownloader("C5D", "http://www.programistazpolski.ct8.pl/C5D.exe", "C5D.exe", () => {
+              
+                Process.Start("C5D.exe");
+                //Process.Start("http://www.programistazpolski.ct8.pl/C5D.exe");
+                File.WriteAllText("c5dlist.txt", "true");
+            }).Show();
+      
             button1.Visible = false;
             panel2.Visible = true;
             groupBox1.Visible = true;
