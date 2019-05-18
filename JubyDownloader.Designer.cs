@@ -43,16 +43,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(129, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 20);
+            this.label1.Size = new System.Drawing.Size(257, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Pobieranie aplikacji {0} {1}%";
+            this.label1.Text = "Downloading application {0} {1}%";
             // 
             // JubyDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(510, 147);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);

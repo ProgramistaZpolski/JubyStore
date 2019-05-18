@@ -18,15 +18,15 @@ namespace Jubystore
         private String url;
         private String downloadDest;
         private Action lol;
-   
+
 
         private void JubyDownloader_Loaded(object sender, EventArgs e)
         {
-    
+
             label1.Text = String.Format(label1.Text, name, 0);
             WebClient client = new WebClient();
             client.DownloadFileAsync(new Uri(url), downloadDest);
-     
+
             client.DownloadFileCompleted += new AsyncCompletedEventHandler(downloadComplete);
             client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(downloadProgress);
         }
