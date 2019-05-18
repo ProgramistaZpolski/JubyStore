@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Jubystore
+namespace Jubity2D_10__Engine
 {
     static class Program
     {
@@ -16,7 +16,9 @@ namespace Jubystore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            WaterSplash main_form = new WaterSplash();
+            main_form.Show();
+            Application.Run();
         }
     }
 }
